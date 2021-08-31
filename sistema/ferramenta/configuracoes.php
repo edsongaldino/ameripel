@@ -1,9 +1,9 @@
 <?php
 // informações do banco de dados (SITE)
-define("BD_HOST","ameripel.com.br");
-define("BD_USUARIO","ameripel_site");
-define("BD_SENHA","Hs]!)S*=R1Ea");
-define("BD_BANCO","ameripel_site");
+define("BD_HOST","ameripel.mysql.dbaas.com.br");
+define("BD_USUARIO","ameripel");
+define("BD_SENHA","SD76SDH$#jhf65");
+define("BD_BANCO","ameripel");
 
 
 // informações do painel
