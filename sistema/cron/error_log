@@ -1,0 +1,19 @@
+[14-Nov-2018 20:40:22 America/Cuiaba] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/realmat/public_html/sistema/cron/envia_emailmarketing.php:84
+Stack trace:
+#0 /home/realmat/public_html/sistema/cron/envia_emailmarketing.php(84): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/realmat/public_html/sistema/cron/envia_emailmarketing.php on line 84
+[14-Nov-2018 20:40:27 America/Cuiaba] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/realmat/public_html/sistema/cron/envia_emailmarketing.php:84
+Stack trace:
+#0 /home/realmat/public_html/sistema/cron/envia_emailmarketing.php(84): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/realmat/public_html/sistema/cron/envia_emailmarketing.php on line 84
+[14-Nov-2018 20:41:35 America/Cuiaba] PHP Fatal error:  Call to a member function closeCursor() on array in /home/realmat/public_html/sistema/cron/envia_emailmarketing.php on line 95
+[19-Nov-2018 16:46:21 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/realmat/public_html/sistema/cron/envia_emailmarketing.php on line 63
+[19-Nov-2018 16:46:23 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/realmat/public_html/sistema/cron/envia_emailmarketing.php on line 63
+[19-Nov-2018 16:46:24 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/realmat/public_html/sistema/cron/envia_emailmarketing.php on line 63
+[03-Jan-2019 16:15:04 America/Cuiaba] PHP Warning:  mail() has been disabled for security reasons in /home/realmat/public_html/sistema/ferramenta/Class/pdo.class.php on line 41
+[03-Jan-2019 16:16:02 America/Cuiaba] PHP Warning:  mail() has been disabled for security reasons in /home/realmat/public_html/sistema/ferramenta/Class/pdo.class.php on line 41
+[03-Jan-2019 16:17:01 America/Cuiaba] PHP Warning:  mail() has been disabled for security reasons in /home/realmat/public_html/sistema/ferramenta/Class/pdo.class.php on line 41
+[03-Jan-2019 16:18:02 America/Cuiaba] PHP Warning:  mail() has been disabled for security reasons in /home/realmat/public_html/sistema/ferramenta/Class/pdo.class.php on line 41
+[03-Jan-2019 16:19:01 America/Cuiaba] PHP Warning:  mail() has been disabled for security reasons in /home/realmat/public_html/sistema/ferramenta/Class/pdo.class.php on line 41

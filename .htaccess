@@ -1,0 +1,17 @@
+RewriteEngine on
+
+# informacoes sobre regra de acesso ameripel.com.br
+
+# evita o download do arquivo .htaccess via browser
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^.htaccess$ /index.php [NC,L]
+
+# força o uso do www em tudo
+Options +FollowSymLinks
+RewriteCond %{HTTP_HOST} ^ameripel.com.br [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)$ https://www.ameripel.com.br/$1 [L,R=301]
