@@ -324,7 +324,7 @@ $sql_consulta_produto = "SELECT produto.codigo_produto, produto.nome_produto, pr
 							<a href="<?php echo $fabricante["link_fabricante"];?>" target="_blank"><img src="conteudos/fabricante/<?php echo $fabricante["arquivo"];?>" alt=""></a>
 							<div class="overlay">
 								<ul>
-									<li><a href="<?php echo $fabricante["link_fabricante"];?>" target="_blank"><i class="fa fa-link"></i></a></li>
+									<li><a href="<?php echo $fabricante["link_fabricante"];?>" target="_blank"><i class="fa fa-link"></i> Site</a></li>
 								</ul>
 							</div>
 						</div>
