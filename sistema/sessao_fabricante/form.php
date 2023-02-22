@@ -33,6 +33,17 @@
                                     </div>
 
                                     <div class="row">
+                                        <label class="col-sm-2 label-on-left">Link para redirecionamento (URL):</label>
+                                        <div class="col-sm-10">
+                                             <div class="form-group label-floating is-empty">
+                                                <label class="control-label"></label>
+                                                <input type="text" name="link_fabricante" class="form-control" value="<?php echo $fabricante["link_fabricante"];?>" required="required">
+                                                <span class="help-block">Link para redirecionamento (URL)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
                                         <legend class="col-sm-2 label-on-left">Logo da fabricante</legend>
                                         <div class="col-sm-4">
                                         <div class="fileinput fileinput-new text-center" data-provides="fileinput">

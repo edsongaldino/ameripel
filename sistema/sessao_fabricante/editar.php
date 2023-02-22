@@ -5,7 +5,7 @@ $pdo = Database::conexao();
 $codigo_fabricante = protege(decodifica($_GET["codigo_fabricante"]));
 
 //consulta fabricantes do produto
-$sql_consulta_fabricante = "SELECT codigo_fabricante, nome_fabricante, area_atuacao, arquivo, status FROM fabricante WHERE codigo_fabricante = '".$codigo_fabricante."'";
+$sql_consulta_fabricante = "SELECT codigo_fabricante, nome_fabricante, link_fabricante, area_atuacao, arquivo, status FROM fabricante WHERE codigo_fabricante = '".$codigo_fabricante."'";
 $result = $pdo->query( $sql_consulta_fabricante );
 $fabricante = $result->fetch( PDO::FETCH_ASSOC );
 
@@ -13,6 +13,7 @@ if(decodifica($_POST["acao"]) == "alterar-fabricante"){
 
     $codigo_fabricante = decodifica($_POST["codigo_fabricante"]);
     $nome_fabricante             = $_POST["nome_fabricante"];
+    $link_fabricante             = $_POST["link_fabricante"];
     $status               = $_POST["status"];
     $area_atuacao             = $_POST["area_atuacao"];
 
@@ -30,6 +31,7 @@ if(decodifica($_POST["acao"]) == "alterar-fabricante"){
     // Insere o produto
     $fabricante = $pdo->prepare("UPDATE fabricante SET
                             nome_fabricante = :nome_fabricante,
+                            link_fabricante = :link_fabricante,
                             area_atuacao = :area_atuacao,
                             arquivo = :arquivo,
                             status = :status
@@ -38,6 +40,7 @@ if(decodifica($_POST["acao"]) == "alterar-fabricante"){
     $fabricante->execute(array(
         ':codigo_fabricante' => $codigo_fabricante,
         ':nome_fabricante' => $nome_fabricante,
+        ':link_fabricante' => $link_fabricante,
         ':area_atuacao' => $area_atuacao,
         ':arquivo' => $filename,
         ':status' => $status

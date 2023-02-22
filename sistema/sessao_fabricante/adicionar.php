@@ -6,6 +6,7 @@ $pdo = Database::conexao();
 if(decodifica($_POST["acao"]) == "adicionar-fabricante"){
 
     $nome_fabricante      = $_POST["nome_fabricante"];
+    $link_fabricante      = $_POST["link_fabricante"];
     $status             = $_POST["status"];
     $area_atuacao      = $_POST["area_atuacao"];
 
@@ -18,12 +19,13 @@ if(decodifica($_POST["acao"]) == "adicionar-fabricante"){
 
     // Insere o produto
     $fabricante = $pdo->prepare("INSERT INTO fabricante 
-                            (nome_fabricante, arquivo, area_atuacao, status)
+                            (nome_fabricante, link_fabricante, arquivo, area_atuacao, status)
                             VALUES
-                            (:nome_fabricante, :arquivo, :area_atuacao, :status)");
+                            (:nome_fabricante, :link_fabricante, :arquivo, :area_atuacao, :status)");
 
     $fabricante->execute(array(
         ':nome_fabricante' => $nome_fabricante,
+        ':link_fabricante' => $link_fabricante,
         ':area_atuacao' => $area_atuacao,
         ':arquivo' => $filename,
         ':status' => $status

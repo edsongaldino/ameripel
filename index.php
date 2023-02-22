@@ -10,7 +10,7 @@ $result = $pdo->query( $sql_consulta_texto );
 $texto = $result->fetch( PDO::FETCH_ASSOC );
 
 //consulta fabricantes
-$sql_consulta_fabricantes = "SELECT fabricante.codigo_fabricante, fabricante.nome_fabricante, fabricante.area_atuacao, fabricante.arquivo, fabricante.status FROM fabricante WHERE fabricante.status = 'L'";
+$sql_consulta_fabricantes = "SELECT fabricante.codigo_fabricante, fabricante.nome_fabricante, fabricante.link_fabricante, fabricante.area_atuacao, fabricante.arquivo, fabricante.status FROM fabricante WHERE fabricante.status = 'L'";
 $result = $pdo->query( $sql_consulta_fabricantes );
 $fabricantes = $result->fetchAll( PDO::FETCH_ASSOC );
 
@@ -321,13 +321,13 @@ $sql_consulta_produto = "SELECT produto.codigo_produto, produto.nome_produto, pr
 				<div class="col-xs-6 col-sm-3">
 					<div class="doctor-list wow fadeIn">
 						<div class="thumb">
-							<img src="conteudos/fabricante/<?php echo $fabricante["arquivo"];?>" alt="">
+							<a href="<?php echo $fabricante["link_fabricante"];?>" target="_blank"><img src="conteudos/fabricante/<?php echo $fabricante["arquivo"];?>" alt=""></a>
 							<div class="overlay">
 								<ul>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-									<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+									<li><a href="<?php echo $fabricante["link_fabricante"];?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="<?php echo $fabricante["link_fabricante"];?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="<?php echo $fabricante["link_fabricante"];?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+									<li><a href="<?php echo $fabricante["link_fabricante"];?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
 								</ul>
 							</div>
 						</div>
